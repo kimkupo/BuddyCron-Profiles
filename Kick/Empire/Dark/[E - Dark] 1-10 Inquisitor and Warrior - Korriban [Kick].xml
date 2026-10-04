@@ -490,12 +490,7 @@
 				</GrindArea>
 			</Grind>
 			<If Condition="HasQuest(0xE000936144F2E728) and not IsStepComplete(0xE000936144F2E728, 6)">
-				<UserDialog Title="Test" Message="Press stop; load the combat bot, press start. Interact with the object, select button 2, press stop, load this profile again and press start" />
-				<TempConvoSkip Type="Light" AutoSkip="True">
-					<UseObject QuestId="0xE000936144F2E728" ObjectName="Great Stone Monument" BranchId="1" StepId="6" IgnoreLOS="True" WaitTime="1" XYZ="31.78556,-17.66019,-32.08852" />
-					<SelectConvoOption Option="2" />
-				</TempConvoSkip>
-				<!-- Did this TCS work? -->
+				<UseObject QuestId="0xE000936144F2E728" ObjectName="Great Stone Monument" BranchId="1" StepId="6" IgnoreLOS="True" WaitTime="1" XYZ="31.78556,-17.66019,-32.08852" />	
 			</If>
 		</If>
 		
