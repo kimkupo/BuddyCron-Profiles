@@ -36,14 +36,14 @@
 
 
 		<!--
-		PickupQuest:[HEROIC 4] Old Enemies / Rewards 13,995 credits and 3 daily commendations. - We skip this Quest! 
+		PickupQuest:[HEROIC 4] Old Enemies / Rewards 13,995 credits and 3 daily commendations. - We skip this Quest!
 		QuestGiver Name: Lord Shaar
 		QuestGiver Position: X="-92.80721" Y="30.76668" Z="221.4167" / Area: 40000001C0831248 / Area Name: bel_main
 		QuestId: 0xE000184539EAF42D
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000184539EAF42D)
 		IsQuestComplete(0xE000184539EAF42D)
 		IsStepComplete(0xE000184539EAF42D, 2)
@@ -52,14 +52,14 @@
 		</If> -->
 
 		<!--
-		PickupQuest: [HEROIC 4] Lights Out / Rewards 13,995 credits and 3 daily commendations. - We skip this Quest! 
+		PickupQuest: [HEROIC 4] Lights Out / Rewards 13,995 credits and 3 daily commendations. - We skip this Quest!
 		QuestGiver Name: Corporal Haddon
 		QuestGiver Position: X="-90.63921" Y="30.762" Z="219.8428" / Area: 40000001C0831248 / Area Name: bel_main
 		QuestId: 0xE000E9B593F17077
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000E9B593F17077)
 		IsQuestComplete(0xE000E9B593F17077)
 		IsStepComplete(0xE000E9B593F17077, 2)
@@ -79,7 +79,7 @@
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000FD1E421BBC7A)
 		IsQuestComplete(0xE000FD1E421BBC7A)
 		IsStepComplete(0xE000FD1E421BBC7A, 2)
@@ -98,7 +98,7 @@
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000A6DDB6F9A148)
 		IsQuestComplete(0xE000A6DDB6F9A148)
 		IsStepComplete(0xE000A6DDB6F9A148, 2)
@@ -116,7 +116,7 @@
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000FD1E421BBC7A)
 		IsQuestComplete(0xE000FD1E421BBC7A)
 		IsStepComplete(0xE000FD1E421BBC7A, 2)
@@ -146,13 +146,13 @@
 			</GrindArea>
 		</Grind>
 
-		<!--  
+		<!--
 		Grind for Quest: Unintended Consequences
 		Id: 0xE000A6DDB6F9A148
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000A6DDB6F9A148)
 		IsQuestComplete(0xE000A6DDB6F9A148)
 		IsStepComplete(0xE000A6DDB6F9A148, 2)
@@ -160,36 +160,34 @@
 		Task 0: 0/1 - Script: IsTaskComplete(0xE000A6DDB6F9A148, 2, 0)
 		Task 1: 0/1 - Script: IsTaskComplete(0xE000A6DDB6F9A148, 2, 1)
 		Task 2: 0/1 - Script: IsTaskComplete(0xE000A6DDB6F9A148, 2, 2)-->
-		<If Condition="HasQuest(0xE000A6DDB6F9A148) and not IsStepComplete(0xE000A6DDB6F9A148,2)" >
+		<If Condition="HasQuest(0xE000A6DDB6F9A148) and not IsStepComplete(0xE000A6DDB6F9A148,2)">
 			<UseObject XYZ="-89.28403, 19.907984, 209.36801" QuestId="0xE000A6DDB6F9A148" StepId="2" TaskId="0" ObjectName="Mining Supplies" Radius="700" UseRange="5" WaitTime="5" />
 			<UseObject XYZ="-89.28403, 19.907984, 209.36801" QuestId="0xE000A6DDB6F9A148" StepId="2" TaskId="1" ObjectName="Excavation Cart" Radius="700" UseRange="5" WaitTime="5" />
 			<UseObject XYZ="-89.28403, 19.907984, 209.36801" QuestId="0xE000A6DDB6F9A148" StepId="2" TaskId="2" ObjectName="Excavation Foot Locker" Radius="700" UseRange="5" WaitTime="5" />
-			
 		</If>
 
-
-		<!-- 
-		UseOject Assemble the Wraith Box for Quest Unintended Consequences (its Current Step 3) 
+		<!--
+		UseOject Assemble the Wraith Box for Quest Unintended Consequences (its Current Step 3)
 		Unintended Consequences
 		Id: 0xE000A6DDB6F9A148
 		Current Step: 3
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000A6DDB6F9A148)
 		IsQuestComplete(0xE000A6DDB6F9A148)
 		IsStepComplete(0xE000A6DDB6F9A148, 3)-->
-		<If Condition="HasQuest(0xE000A6DDB6F9A148) and not IsStepComplete(0xE000A6DDB6F9A148, 3)" >
-			<UseObject ObjectName="Wraith Box"  QuestId="0xE000A6DDB6F9A148" StepId="3" WaitTime="3000" XYZ="-112.5121,19.48314,200.0852" />
+		<If Condition="HasQuest(0xE000A6DDB6F9A148) and not IsStepComplete(0xE000A6DDB6F9A148, 3)">
+			<UseObject ObjectName="Wraith Box" QuestId="0xE000A6DDB6F9A148" StepId="3" WaitTime="3000" XYZ="-112.5121,19.48314,200.0852" />
 		</If>
 
-		<!-- 
+		<!--
 		TurnIn: Invisible Threat
 		Id: 0xE000FD1E421BBC7A
 		Current Step: 3
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000FD1E421BBC7A)
 		IsQuestComplete(0xE000FD1E421BBC7A)
 		IsStepComplete(0xE000FD1E421BBC7A, 3)
@@ -199,13 +197,13 @@
 		<TurnInQuest QuestName="Invisible Threat" QuestId="0xE000FD1E421BBC7A" TurnInName="N4-71" XYZ="-94.3828,30.76542,221.3666" />
 		<CompleteQuest QuestName="Invisible Threat" QuestId="0xE000FD1E421BBC7A" />
 
-		<!-- 
+		<!--
 		TurnIn: Unintended Consequences
 		Id: 0xE000A6DDB6F9A148
 		Current Step: 4
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000A6DDB6F9A148)
 		IsQuestComplete(0xE000A6DDB6F9A148)
 		IsStepComplete(0xE000A6DDB6F9A148, 4)
@@ -228,7 +226,7 @@
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE0006744EE8D74C2)
 		IsQuestComplete(0xE0006744EE8D74C2)
 		IsStepComplete(0xE0006744EE8D74C2, 2)-->
@@ -244,11 +242,11 @@
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE0003671CE5ACC9A)
 		IsQuestComplete(0xE0003671CE5ACC9A)
 		IsStepComplete(0xE0003671CE5ACC9A, 2)-->
-		<If Condition="not HasQuest(0xE0003671CE5ACC9A) and not IsQuestComplete(0xE0003671CE5ACC9A)">
+		<If Condition="not HasQuest(0xE0003671CE5ACC9A) and not IsQuestComplete(0xE0003671CE5ACC9A) and IsEligibleForQuest(0xE0003671CE5ACC9A)">
 			<PickupQuest QuestName="Found in Translation" QuestId="0xE0003671CE5ACC9A" GiverName="Specialist Nattis" XYZ="-76.6261,15.70979,-237.3105"/>
 		</If>
 
@@ -260,7 +258,7 @@
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000A8107C26C55A)
 		IsQuestComplete(0xE000A8107C26C55A)
 		IsStepComplete(0xE000A8107C26C55A, 2)-->
@@ -276,11 +274,11 @@
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000520CF445E695)
 		IsQuestComplete(0xE000520CF445E695)
 		IsStepComplete(0xE000520CF445E695, 2)-->
-		
+
 		<!--
 		PickupQuest: The Carriers of Xenovirus Prime / Rewards 7,125 credits and 1 daily commendation.
 		QuestGiver Name: Monitoring Station
@@ -289,84 +287,95 @@
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE000D987B579F78A)
 		IsQuestComplete(0xE000D987B579F78A)
 		IsStepComplete(0xE000D987B579F78A, 2)-->
-		<PickupQuest QuestName="The Carriers of Xenovirus Prime" QuestId="0xE000D987B579F78A" GiverName="Monitoring Station" XYZ="-77.69521,17.20761,-277.5983"/>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		<PickupQuest QuestName="The Carriers of Xenovirus Prime" QuestId="0xE000D987B579F78A" GiverName="Monitoring Station" XYZ="-77.69521,17.20761,-277.5983" />
+
 		<!--
 		Grind for Quest: Reluctant Volunteers
 		Id: 0xE0006744EE8D74C2
 		Current Step: 2
 		Current Branch: 1
 		Repeatable: True
-		Profile Functions: 
+		Profile Functions:
 		HasQuest(0xE0006744EE8D74C2)
 		IsQuestComplete(0xE0006744EE8D74C2)
 		IsStepComplete(0xE0006744EE8D74C2, 2)-->
-		<Grind While="HasQuest(0xE0006744EE8D74C2) and not IsStepComplete(0xE0006744EE8D74C2, 2)">
-			<GrindArea Name="Reluctant Volunteers">
-				<MinLevel>1</MinLevel>
-				<MaxLevel>51</MaxLevel>
-				<Mobs>
-					<Mob>Esh-kha Brute</Mob>
-				</Mobs>
+		<If Condition="((HasQuest(0xE00020ACF378DFC5)) and (not IsStepComplete(0xE00020ACF378DFC5, 2)))">
+			<UseItem QuestId="0xE00020ACF378DFC5" ItemName="Savant Subjugation Device" StepId="2" InCombat="True" UseHealthPercent="24" Radius="700">
+				<Npcs>
+					<Npc>Esh-kha High Savant</Npc>
+				</Npcs>
 				<Hotspots>
-					<Hotspot Name="Esh-kha Brute" XYZ="-86.99247,12.26913,-262.5849" />
+					<Hotspot Name="Esh-kha High Savant" XYZ="-86.81104, 12.403803, -269.85434" Radius="7000"/>
 				</Hotspots>
-			</GrindArea>
-		</Grind>
+			</UseItem>
+		</If>
 
+		<If Condition="((HasQuest(0xE0006744EE8D74C2)) and (not IsStepComplete(0xE0006744EE8D74C2, 2)))">
+			<UseItem QuestId="0xE0006744EE8D74C2" ItemName="Savant Subjugation Device" StepId="2" InCombat="True" UseHealthPercent="24" Radius="700">
+				<Npcs>
+					<Npc>Esh-kha Savant</Npc>
+				</Npcs>
+				<Hotspots>
+					<Hotspot Name="Esh-kha Savant" XYZ="-94.35981, 12.300479, -270.90778" Radius="7000"/>
+					<Hotspot Name="Esh-kha Savant" XYZ="-88.1241, 12.24948, -263.2944" Radius="7000"/>
+				</Hotspots>
+			</UseItem>
+		</If>
 
+		<!-- Ancient Transmissions -->
+		<If Condition="HasQuest(0xE000A8107C26C55A) and not IsStepComplete(0xE000A8107C26C55A, 2)">
+			<Grind While="HasQuest(0xE00068449068CA77) and not IsQuestComplete(0xE00068449068CA77)">
+				<GrindArea Name="Ancient Transmissions">
+					<MinLevel>1</MinLevel>
+					<MaxLevel>51</MaxLevel>
+					<Mobs>
+						<Mob>Esh-kha Master Savant</Mob>
+					</Mobs>
+					<Hotspots>
+						<Hotspot Name="Temple" XYZ="-122.910286, 10.102001, -287.35052" Radius="700" />
+					</Hotspots>
+				</GrindArea>
+			</Grind>
+		</If>
 
+		<!-- Ancient Transmissions -->
+		<If Condition="HasQuest(0xE000A8107C26C55A) and not IsStepComplete(0xE000A8107C26C55A, 3)">
+			<UseObject XYZ="-131.01065, 9.292685, -297.16385" QuestId="0xE000A8107C26C55A" StepId="3" TaskId="0" ObjectName="Rakata Command Console" Radius="700" UseRange="5" WaitTime="5" />
+		</If>
 
+		<!-- Tactical Strike -->
+		<If Condition="((HasQuest(0xE00068449068CA77)) and (not IsQuestComplete(0xE00068449068CA77)))">
+			<Grind While="HasQuest(0xE00068449068CA77) and not IsQuestComplete(0xE00068449068CA77)">
+				<GrindArea Name="Tactical Strike">
+					<MinLevel>1</MinLevel>
+					<MaxLevel>51</MaxLevel>
+					<Mobs>
+						<Mob>Esh-kha Master Savant</Mob>
+						<Mob>Esh-kha Guard</Mob>
+						<Mob>Esh-kha Tactician</Mob>
+						<Mob>Esh-kha Guard</Mob>
+					</Mobs>
+					<Hotspots>
+						<Hotspot Name="Temple" XYZ="-122.910286, 10.102001, -287.35052" Radius="700" />
+					</Hotspots>
+				</GrindArea>
+			</Grind>
+		</If>
 
+		<!-- The Carriers of Xenovirus Prime -->
+		<If Condition="((HasQuest(0xE000D987B579F78A)) and (not IsQuestComplete(0xE000D987B579F78A)))">
+			<UseItem QuestId="0xE000D987B579F78A" ItemName="Handful of Location Markers" StepId="2" TaskId="0" TaskValue="0" Range="1" XYZ="-61.844658, 10.002001, -263.15347" />
+			<UseItem QuestId="0xE000D987B579F78A" ItemName="Handful of Location Markers" StepId="2" TaskId="0" TaskValue="1" Range="1" XYZ="-59.241787, 10.002001, -258.4119" />
 
+			<UseItem QuestId="0xE000D987B579F78A" ItemName="Handful of Location Markers" StepId="2" TaskId="0" TaskValue="2" Range="1" XYZ="-46.475616, 10.002001, -263.23642" />
+			<UseItem QuestId="0xE000D987B579F78A" ItemName="Handful of Location Markers" StepId="2" TaskId="0" TaskValue="3" Range="1" XYZ="-46.44843, 10.002001, -258.43362" />
+		</If>
 
-
-
-
-
-
-
-
-	</Questing>	
-
-
-
-
-
-
-
+		<TurnInQuest QuestName="The Carriers of Xenovirus Prime" QuestId="0xE000D987B579F78A" GiverName="Monitoring Station" XYZ="-77.69521,17.20761,-277.5983" />
+		<TurnInQuest QuestName="Reluctant Volunteers" QuestId="0xE0006744EE8D74C2" GiverName="Darth Synar" XYZ="-78.4763,15.711,-238.6302"/>
+	</Questing>
 </Profile>
