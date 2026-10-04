@@ -160,23 +160,13 @@
 		Task 0: 0/1 - Script: IsTaskComplete(0xE000A6DDB6F9A148, 2, 0)
 		Task 1: 0/1 - Script: IsTaskComplete(0xE000A6DDB6F9A148, 2, 1)
 		Task 2: 0/1 - Script: IsTaskComplete(0xE000A6DDB6F9A148, 2, 2)-->
-		<Grind While="HasQuest(0xE000A6DDB6F9A148) and not IsStepComplete(0xE000A6DDB6F9A148, 2)">
-			<GrindArea Name="Unintended Consequences">
-				<MinLevel>1</MinLevel>
-				<MaxLevel>51</MaxLevel>
-				<Mobs>
-					<Mob>Kaleesh Hunter</Mob>
-					<Mob>Kaleesh Commander</Mob>
-					<Mob>Kaleesh Warrior</Mob>
-				</Mobs>
-				<Hotspots>
-					<Hotspot Name="Kaleesh Hunter" XYZ="-81.05198,27.89351,210.1513" />
-					<Hotspot Name="Kaleesh Commander" XYZ="-85.56503,27.901,209.7249" />
-					<Hotspot Name="Kaleesh Warrior" XYZ="-91.3098,19.901,210.9836" />
-					<Hotspot Name="Kaleesh Warrior" XYZ="-95.41041,19.711,207.3495" />
-				</Hotspots>
-			</GrindArea>
-		</Grind>
+		<If Condition="HasQuest(0xE000A6DDB6F9A148) and not IsStepComplete(0xE000A6DDB6F9A148,2)" >
+			<UseObject XYZ="-89.28403, 19.907984, 209.36801" QuestId="0xE000A6DDB6F9A148" StepId="2" TaskId="0" ObjectName="Mining Supplies" Radius="700" UseRange="5" WaitTime="5" />
+			<UseObject XYZ="-89.28403, 19.907984, 209.36801" QuestId="0xE000A6DDB6F9A148" StepId="2" TaskId="1" ObjectName="Excavation Cart" Radius="700" UseRange="5" WaitTime="5" />
+			<UseObject XYZ="-89.28403, 19.907984, 209.36801" QuestId="0xE000A6DDB6F9A148" StepId="2" TaskId="2" ObjectName="Excavation Foot Locker" Radius="700" UseRange="5" WaitTime="5" />
+			
+		</If>
+
 
 		<!-- 
 		UseOject Assemble the Wraith Box for Quest Unintended Consequences (its Current Step 3) 
