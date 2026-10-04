@@ -1,3 +1,6 @@
+<Profile xmlns="http://tempuri.org/ProfileSchema.xsd">
+	<Name>Elevators</Name>
+
 <!-- Elevators -->
 
 
@@ -1539,3 +1542,4 @@ Room: int_h4g_Transport5_smuggler_room08
 
 
 
+</Profile>

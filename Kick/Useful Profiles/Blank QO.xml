@@ -84,7 +84,6 @@
 	<PickUpQuest QuestName="" QuestId="" Giver
 	<PickUpQuest QuestName="" QuestId="" Type="Placeable" UseRange="2" GiverName="" 
 		
-		 <!-- 
 		 <If Condition="(not IsQuestComplete())">
 			<Grind GrindRef="" While="(not IsQuestComplete())" />
 		 </If>
@@ -92,17 +91,14 @@
 			<Grind GrindRef="" While="(not IsBranchStepComplete(, 1, 2))" />
 			<Grind GrindRef="" While="(not IsBranchTaskComplete(, 1, 2, 0))" />
 			
-		<!-- 
 		<If Condition="((HasQuest()) and (not IsQuestComplete()))">
 		</If>
 		
-		<!-- 
 		<If Condition="((HasQuest()) and (not IsQuestComplete()))">
 		 <If Condition="((HasQuest()) and (not IsBranchStepComplete(, 1, 2)))">
 		 </If>
 		</If>
 		
-		<!-- 
 		<If Condition="((HasQuest()) and (not IsQuestComplete()))">
 		 <If Condition="((HasQuest()) and (not IsBranchStepComplete(, 1, 2)))">
 		  <If Condition="((HasQuest()) and (not IsBranchTaskComplete(, 1, 2, 0)))">
@@ -110,7 +106,7 @@
 		 </If>
 		</If>
 		
-		<!-- Turnin 
+		Turnin
 		<If Condition="((HasQuest()) and (not IsQuestComplete()))">
 	<TurnInQuest QuestName="" QuestId="" TurnIn
 			<CompleteQuest QuestName="" QuestId="" />

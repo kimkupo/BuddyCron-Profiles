@@ -6,12 +6,12 @@
 	
 	<Questing>
 
-		<MoveTo QuestId="1" XYZ />
-		<MoveTo QuestId="1" XYZ />
-		<MoveTo QuestId="1" XYZ />
-		<MoveTo QuestId="1" XYZ />
-		<MoveTo QuestId="1" XYZ />
-		<MoveTo QuestId="1" XYZ />
+		<MoveTo QuestId="1" XYZ="" />
+		<MoveTo QuestId="1" XYZ="" />
+		<MoveTo QuestId="1" XYZ="" />
+		<MoveTo QuestId="1" XYZ="" />
+		<MoveTo QuestId="1" XYZ="" />
+		<MoveTo QuestId="1" XYZ="" />
 
 	
 	</Questing>    

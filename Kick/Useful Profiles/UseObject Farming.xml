@@ -11,12 +11,12 @@
 				<Placeable>Some Lockbox</Placeable>
 			</Placeables>
 			<Hotspots>
-				<Hotspot XYZ />
-				<Hotspot XYZ />
-				<Hotspot XYZ />
-				<Hotspot XYZ />
-				<Hotspot XYZ />
-				<Hotspot XYZ />
+				<Hotspot XYZ="" />
+				<Hotspot XYZ="" />
+				<Hotspot XYZ="" />
+				<Hotspot XYZ="" />
+				<Hotspot XYZ="" />
+				<Hotspot XYZ="" />
 			</Hotspots>
 		</UseObject>
 

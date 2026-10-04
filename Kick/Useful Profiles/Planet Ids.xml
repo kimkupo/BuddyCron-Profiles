@@ -1,3 +1,6 @@
+<Profile xmlns="http://tempuri.org/ProfileSchema.xsd">
+	<Name>Planet Ids</Name>
+
 <!-- Kick's Planet Id's Document for when Apoc QQ's about not having them! -->
 
 <!-- Alderaan 
@@ -118,3 +121,5 @@ Area Name: con_dreadnought
 Area: 4000000617C4E17A
 Area Name: agt_epochoffear
 -->
+
+</Profile>

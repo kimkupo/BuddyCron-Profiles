@@ -114,10 +114,6 @@
 			<If Condition="not IsStepComplete(0xE0001EE9E968024E, 2)">
 				<PickUpQuest QuestName="Body of Evidence" QuestId="0xE0001EE9E968024E" GiverName="Intelligence Officer Breerdin" XYZ="-19.891,5.557197,97.0673" />
 			</If>
-		
-			<!-- Taxi -->
-			<If Condition="not IsStepComplete(0xE000299B7B39CC58, 2)" />
-		</If>
 
 		<!-- Operation Breaking Point -->
 		<If Condition="not IsStepComplete(0xE000299B7B39CC58, 2)">
@@ -268,11 +264,6 @@
 	<If Condition="not IsStepComplete(0xE0002FE18F814730, 2)">
 		<PickUpQuest QuestName="The Leak" QuestId="0xE0002FE18F814730" GiverName="Senior Science Officer Sakoal" XYZ="-23.17765,9.4682,182.0676" />
 	</If>
-		
-	<!-- Bindpoint & Taxi -->
-	<If Condition="not IsStepComplete(0xE0007300095B167B, 2)" />
-	<!-- Learning Taxi Node -->
-</If>
 		
 <!-- Wild Fire -->
 <If Condition="not IsStepComplete(0xE0007300095B167B, 2)">
@@ -1402,9 +1393,9 @@
 		<Mob>Resistance Operative</Mob>
 		<Mob>Resistance Patriot</Mob>
 		<Mob>Resistance Sniper</Mob>
-		<Mob>Resistance Tech Specialist
-			<Mob>Resistance Veteran Gunner</Mob>
-			<Mob>Resistance Watchguard</Mob>
+		<Mob>Resistance Tech Specialist</Mob>
+		<Mob>Resistance Veteran Gunner</Mob>
+		<Mob>Resistance Watchguard</Mob>
 		</Mobs>
 		<Hotspots>
 			<Hotspot Name="My Location" XYZ="-124.7477,9.942477,95.44182" />

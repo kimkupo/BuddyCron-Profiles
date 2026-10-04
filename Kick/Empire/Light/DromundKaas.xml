@@ -491,7 +491,7 @@
 						<Hotspot Name="My Location" XYZ="51.3284,6.527348,158.9161" />
 						<Hotspot Name="My Location" XYZ="50.8248,6.509915,161.6119" />
 						<Hotspot Name="My Location" XYZ="51.6453,6.533247,163.1355" />
-						<Hotspot Name="My Location X="46.634" Y="6.530481" Z="155.1958" />
+						<Hotspot Name="My Location" XYZ="46.634,6.530481,155.1958" />
 					</Hotspots>
 				</GrindArea>
 			</Grind>
@@ -609,7 +609,7 @@
 		</Grind>
 		
 		<!-- Into The Maw -->
-		<While ="not IsTaskComplete(0xE0008263AD8DB16C, 3, 2)">
+		<While Condition="not IsTaskComplete(0xE0008263AD8DB16C, 3, 2)">
 			<UseObject QuestId="0xE0008263AD8DB16C" ObjectName="Supply Cache" WaitTime="3000" XYZ="14.27637,-5.714446,34.95294" Radius="100" />
 		</While>
 		
@@ -873,7 +873,7 @@
 		<!-- Inquisitor -->
 		<If Condition="Me.Class == CharacterClass.Inquisitor">
 			<!-- Cybernetic Sabotage -->
-			<If ="not IsTaskComplete(0xE00014D902E3FA21, 2, 1) or not IsQuestComplete(0xE00014D902E3FA21)">
+			<If Condition="not IsTaskComplete(0xE00014D902E3FA21, 2, 1) or not IsQuestComplete(0xE00014D902E3FA21)">
 				<UseObject QuestId="0xE00014D902E3FA21" ObjectName="Cybernetic Research Control" WaitTime="2000" XYZ="-49.36314,-10.16211,169.9212" />
 				<UseObject QuestId="0xE00014D902E3FA21" ObjectName="Cybernetic Research Control" WaitTime="2000" XYZ="-42.95051,-10.16156,176.8485" />
 				<UseObject QuestId="0xE00014D902E3FA21" ObjectName="Cybernetic Research Control" WaitTime="2000" XYZ="-45.24141,-9.052556,172.776" />
@@ -1225,7 +1225,7 @@
 		</If>
 		
 		<!-- Unauthorized Transmission, Part II -->
-		<CompleteQuest QuestName="Unauthorized Transmission, Part II" QuestId=0xE00011B89F255A8D"" />
+		<CompleteQuest QuestName="Unauthorized Transmission, Part II" QuestId="0xE00011B89F255A8D" />
 		
 		<!-- The Accursed -->
 		<If Condition="not IsStepComplete(0xE000F5F9E56B8C7D, 2)">
