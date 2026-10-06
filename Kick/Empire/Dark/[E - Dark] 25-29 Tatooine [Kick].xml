@@ -1098,6 +1098,12 @@
 			<If Condition="HasQuest(0xE0009853C75EF6D9) and not IsBranchStepComplete(0xE0009853C75EF6D9, 1, 2)">
 				<MoveTo QuestId="0xE0009853C75EF6D9" XYZ="-69.44077,43.7254,29.38019" />
 			</If>
+			<If Condition="HasQuest(0xE0009853C75EF6D9) and not IsBranchStepComplete(0xE0009853C75EF6D9, 1, 3)">
+				<MoveTo QuestId="0xE0009853C75EF6D9" XYZ="-69.44077,43.7254,29.38019" />
+				<UseObject QuestId="0xE0009853C75EF6D9" ObjectName="Cargo Crate" BranchId="1" StepId="3" Radius="30" WaitTime="4" XYZ="-69.44077,43.7254,29.38019" />
+				<Interact Name="Cargo Crate" QuestId="0xE0009853C75EF6D9" IgnoreLOS="True" UseRange="15" WaitTime="4" XYZ="-69.44077,43.7254,29.38019" />
+				<WaitTimer QuestId="1" WaitTime="8" />
+			</If>
 			<!-- Harsh Lessons - Defeat Ghost Cell Forces -->
 			<If Condition="HasQuest(0xE0005CCA12A2D5AE) and (not IsQuestComplete(0xE0005CCA12A2D5AE))">
 				<Grind While="HasQuest(0xE0005CCA12A2D5AE) and (not IsQuestComplete(0xE0005CCA12A2D5AE))">
@@ -1123,7 +1129,7 @@
 				<MoveTo QuestId="0xE0009853C75EF6D9" XYZ="-237.3999,38.95087,-214.551" />
 			</If>
 			<If Condition="HasQuest(0xE0009853C75EF6D9) and not IsBranchStepComplete(0xE0009853C75EF6D9, 1, 5)" >
-				<TalkTo QuestId="0xE0009853C75EF6D9" WaitTime="1" Name="The Old Man" XYZ="-237.4283,38.95154,-214.609" />
+				<TalkTo QuestId="0xE0009853C75EF6D9" WaitTime="5" Name="The Old Man" XYZ="-237.4283,38.95154,-214.609" />
 			</If>
 			<Grind While="not IsBranchStepComplete(0xE0009853C75EF6D9, 1, 6)">
 				<GrindArea Name="The Assassin's Fortress - Defeat the Old Man">
@@ -1138,7 +1144,7 @@
 				</GrindArea>
 			</Grind>
 			<If Condition="HasQuest(0xE0009853C75EF6D9) and not IsBranchStepComplete(0xE0009853C75EF6D9, 1, 7)" >
-				<TalkTo QuestId="0xE0009853C75EF6D9" WaitTime="1" Name="The Old Man" XYZ="-237.6969,38.95692,-214.6994" />
+				<TalkTo QuestId="0xE0009853C75EF6D9" WaitTime="5" Name="The Old Man" XYZ="-237.6969,38.95692,-214.6994" />
 	
 				<!-- Use Your Ships Holoterminal -->
 			</If>
