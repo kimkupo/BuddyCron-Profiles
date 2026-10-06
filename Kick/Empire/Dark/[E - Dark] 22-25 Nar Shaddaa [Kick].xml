@@ -333,10 +333,10 @@
 			<TurnInQuest QuestName="The Walls Have Ears" QuestId="0xE0000E532FD25BD8" TurnInName="Officer Keeling" XYZ="-397.8891,23.501,-147.7107" />
 			<CompleteQuest QuestName="The Walls Have Ears" QuestId="0xE0000E532FD25BD8" />
 		</If>
-		
+		<!-- Skip unavailable B9-D7 side quest
 		<MoveTo XYZ="-394.3502,23.501,-144.8" />
 		<PickUpQuest QuestName="The First Casualty" QuestId="0xE00072DA1CF2D4A6" GiverName="B9-D7" XYZ="-394.3502,23.501,-144.4404" />
-		
+		-->
 		<!-- The Exchange Enhancement Facility -->
 		<If Condition="((HasQuest(0xE000833722A79AB8)) and (not IsQuestComplete(0xE000833722A79AB8)))">
 			<UseObject QuestId="0xE000833722A79AB8" ObjectName="Chemical Incubator" BranchId="1" StepId="2" Radius="200" WaitTime="3" >
