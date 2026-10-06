@@ -1505,13 +1505,15 @@
 			
 			</If>
 			<If Condition="HasQuest(0xE000DCB2762AA893) and not IsBranchStepComplete(0xE000DCB2762AA893, 2, 2)">
-				<If Condition="(Core.Player.AreaId == 0x40000002278FFC5D)">
+				<If Condition="(Core.Player.AreaId != 0x40000007C8166A37)">
 					<MoveTo QuestId="1" XYZ="-212.4707,-6.998997,-208.869" />
 					<MoveTo QuestId="1" XYZ="-212.0908,-6.301369,-210.6779" />
 					<Interact Name="X-70B Phantom" IgnoreLOS="True" UseRange="20" WaitTime="8" XYZ="-212.0908,-6.301369,-210.6779" />
 					<WaitTimer QuestId="1" WaitTime="60" />
 				</If>
-				<Interact Name="Holoterminal" IgnoreLOS="True" XYZ="0.002297453,1.051,-0.4817362" />
+				<If Condition="(Core.Player.AreaId == 0x40000007C8166A37)">
+					<Interact Name="Holoterminal" IgnoreLOS="True" XYZ="0.002297453,1.051,-0.4817362" />
+				</If>
 			</If>
 			<If Condition="HasQuest(0xE000DCB2762AA893) and not IsBranchStepComplete(0xE000DCB2762AA893, 6, 2)">
 				<If Condition="(Core.Player.AreaId == 0x40000007C8166A37)"> <!-- My Ship -->
@@ -1530,7 +1532,15 @@
 					<Interact Name="X-70B Phantom" UseRange="20" XYZ="77.52087,-7.101369,50.18936" />
 					<WaitTimer QuestId="1" WaitTime="60" />
 				</If>
-				<Interact Name="Holoterminal" XYZ="-0.00581874,1.051,-0.4990843" />
+				<If Condition="(Core.Player.AreaId != 0x4000000046FD234A) and (Core.Player.AreaId != 0x40000007C8166A37)"> <!-- Nar Shaddaa / Not Dromund Kaas and Not Ship -->
+					<MoveTo QuestId="1" XYZ="-212.4707,-6.998997,-208.869" />
+					<MoveTo QuestId="1" XYZ="-212.0908,-6.301369,-210.6779" />
+					<Interact Name="X-70B Phantom" IgnoreLOS="True" UseRange="20" WaitTime="8" XYZ="-212.0908,-6.301369,-210.6779" />
+					<WaitTimer QuestId="1" WaitTime="60" />
+				</If>
+				<If Condition="(Core.Player.AreaId == 0x40000007C8166A37)"> <!-- My Ship -->
+					<Interact Name="Holoterminal" XYZ="-0.00581874,1.051,-0.4990843" />
+				</If>
 			</If>
 			<CompleteQuest QuestName="Shadow of the Dark Lord" QuestId="0xE000DCB2762AA893" />
 			<!-- Formal Introductions -->
@@ -1543,7 +1553,9 @@
 				<SpaceTravel Planet="Tatooine" />
 			</If>
 			<If Condition="((HasQuest(0xE000F1803B97A0CE)) and (not IsBranchStepComplete(0xE000F1803B97A0CE, 1, 3)))">
-				<Interact Name="Holoterminal" XYZ="-0.00581874,1.051,-0.4990843" />
+				<If Condition="(Core.Player.AreaId == 0x40000007C8166A37)">
+					<Interact Name="Holoterminal" XYZ="-0.00581874,1.051,-0.4990843" />
+				</If>
 			</If>
 			<If Condition="HasQuest(0xE000F1803B97A0CE) and not IsBranchStepComplete(0xE000F1803B97A0CE, 1, 4)">
 				<If Condition="(Core.Player.AreaId == 0x40000007C8166A37)"> <!-- My Ship -->
