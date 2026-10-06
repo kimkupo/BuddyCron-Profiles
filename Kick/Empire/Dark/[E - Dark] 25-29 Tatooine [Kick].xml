@@ -541,10 +541,10 @@
 		<If Condition="((HasQuest(0xE000039E1A5DF69F)) and (not IsQuestComplete(0xE000039E1A5DF69F)))">
 			<TurnInQuest QuestName="Shaman" QuestId="0xE000039E1A5DF69F" TurnInName="Commander Vilos" XYZ="84.4806,49.83815,311.6246" />
 			<CompleteQuest QuestName="Shaman" QuestId="0xE000039E1A5DF69F" />
+			<ForceVendor VendorType="Train" />
+			<ForceVendor VendorType="Repair" />
 		</If>
 		-->
-		<ForceVendor VendorType="Train" />
-		<ForceVendor VendorType="Repair" />
 		
 		<!-- Journey into Dust -->
 		<If Condition="((HasQuest(0xE00054291E242297)) and (not IsQuestComplete(0xE00054291E242297)))">
@@ -1252,8 +1252,8 @@
 			<UseObject ObjectName="Czerka Relay Tower" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="8" IgnoreLOS="True" WaitTime="5" XYZ="-202.0034,41.3638,-60.14977" />
 			<!-- Ele going down -->
 			<!-- Stage 1 - Archaeology of Opportunity - Defeat Czerka Dig site Forces -->
-			<If Condition="not HasQuest(0xE00043A05ADFF616) and not IsQuestComplete(0xE00043A05ADFF616)">
-				<Grind While="not IsQuestComplete(0xE00043A05ADFF616) ">
+			<If Condition="HasQuest(0xE00043A05ADFF616) and (not IsQuestComplete(0xE00043A05ADFF616))">
+				<Grind While="HasQuest(0xE00043A05ADFF616) and (not IsQuestComplete(0xE00043A05ADFF616))">
 					<GrindArea Name="Stage 1 - Archaeology of Opportunity - Defeat Czerka Dig site Forces">
 						<MinLevel>1</MinLevel>
 						<MaxLevel>51</MaxLevel>
@@ -1358,15 +1358,10 @@
 			<ForceVendor VendorType="Repair" />
 		</If>
 		
-		<!-- Pickup Tatooine: Bonus Series -->
+		<!-- Ignoring Tatooine: Bonus Series to avoid backtracking to Mos Ila
 		<If Condition="((not HasQuest(0xE0003D60C6FDE2DC)) and (not IsQuestComplete(0xE0003D60C6FDE2DC)))">
 			<PickUpQuest QuestName="Tatooine: Bonus Series" QuestId="0xE0003D60C6FDE2DC" GiverName="Sergeant Charnso" XYZ="61.7212,51.901,355.5105" />
-	
 		</If>
-		
-		<!-- Ignoring H2+ Supply Lines from Captain Cibinel -->
-		
-		<!-- Tatooine: Bonus Series -->
 		<If Condition="((HasQuest(0xE0003D60C6FDE2DC)) and (not IsQuestComplete(0xE0003D60C6FDE2DC)))">
 			<UseObject QuestId="0xE0003D60C6FDE2DC" ObjectName="Mandalorian Initiate Corpse" BranchId="1" StepId="2" Radius="200" WaitTime="4500" >
 				<Hotspots>
@@ -1381,6 +1376,7 @@
 				<TalkTo QuestId="0xE0003D60C6FDE2DC" WaitTime="5" Name="Randor Mohl" XYZ="121.8452,43.1343,11.9038" />
 			</If>
 		</If>
+		-->
 		
 		<PickUpQuest QuestName="Stirring Up the Natives" QuestId="0xE00008F3224BFDC5" GiverName="Geris Paelid" XYZ="124.2027,43.20512,9.062798" />
 		<PickUpQuest QuestName="Desert Conquest" QuestId="0xE000CCB737D490F6" GiverName="Zola Arvannus" XYZ="124.4105,43.05461,13.3592" />
