@@ -1304,26 +1304,37 @@
 					</GrindArea>
 				</Grind>
 			</If>
-			<UseObject ObjectName="Ancient Machine" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="9" WaitTime="2" XYZ="-199.7458,30.92782,-36.19707" />
-			<Grind While="not IsBranchStepComplete(0xE0004E36DF9E2E01, 1, 10)">
-				<GrindArea Name="The Thing Czerka Found - Defeat the Imprisoned One's Ambush">
-					<MinLevel>1</MinLevel>
-					<MaxLevel>51</MaxLevel>
-					<Mobs>
-						<Mob>Mutated Czerka Guard</Mob>
-					</Mobs>
-					<Hotspots>
-						<Hotspot Name="Mutated Czerka Guard" XYZ="-200.0969,30.91985,-35.0676" />
-					</Hotspots>
-				</GrindArea>
-			</Grind>
+			<If Condition="((HasQuest(0xE0004E36DF9E2E01)) and (not IsBranchStepComplete(0xE0004E36DF9E2E01, 1, 9)))">
+				<MoveTo QuestId="0xE0004E36DF9E2E01" XYZ="-199.7458,30.92782,-36.19707" />
+				<UseObject ObjectName="Ancient Machine" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="9" Radius="20" UseRange="40" IgnoreLOS="True" WaitTime="4" XYZ="-199.7458,30.92782,-36.19707" />
+			</If>
+			<If Condition="((HasQuest(0xE0004E36DF9E2E01)) and (not IsBranchStepComplete(0xE0004E36DF9E2E01, 1, 10)))">
+				<Grind While="((HasQuest(0xE0004E36DF9E2E01)) and (not IsBranchStepComplete(0xE0004E36DF9E2E01, 1, 10)))">
+					<GrindArea Name="The Thing Czerka Found - Defeat the Imprisoned One's Ambush">
+						<MinLevel>1</MinLevel>
+						<MaxLevel>51</MaxLevel>
+						<Mobs>
+							<Mob>Mutated Czerka Guard</Mob>
+						</Mobs>
+						<Hotspots>
+							<Hotspot Name="Mutated Czerka Guard" XYZ="-200.0969,30.91985,-35.0676" />
+						</Hotspots>
+					</GrindArea>
+				</Grind>
+			</If>
 			<!-- Ignore Combat and use this object -->
-			<UseObject ObjectName="Ancient Cybernetic Enhancement Equipment" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="11" WaitTime="5" XYZ="-204.3786,30.16483,-28.40017" />
+			<If Condition="((HasQuest(0xE0004E36DF9E2E01)) and (not IsBranchStepComplete(0xE0004E36DF9E2E01, 1, 11)))">
+				<MoveTo QuestId="0xE0004E36DF9E2E01" XYZ="-204.3786,30.16483,-28.40017" />
+				<UseObject ObjectName="Ancient Cybernetic Enhancement Equipment" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="11" Radius="20" UseRange="10" IgnoreLOS="True" WaitTime="5" XYZ="-204.3786,30.16483,-28.40017" />
+			</If>
 			<!-- Ignore Combat and use this object -->
-			<UseObject ObjectName="Ancient Droid Manufacturing Equipment" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="12" WaitTime="5" XYZ="-206.1721,28.71707,-47.23711" />
+			<If Condition="((HasQuest(0xE0004E36DF9E2E01)) and (not IsBranchStepComplete(0xE0004E36DF9E2E01, 1, 12)))">
+				<MoveTo QuestId="0xE0004E36DF9E2E01" XYZ="-206.1721,28.71707,-47.23711" />
+				<UseObject ObjectName="Ancient Droid Manufacturing Equipment" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="12" Radius="20" UseRange="10" IgnoreLOS="True" WaitTime="5" XYZ="-206.1721,28.71707,-47.23711" />
+			</If>
 			<If Condition="((HasQuest(0xE0004E36DF9E2E01)) and (not IsBranchStepComplete(0xE0004E36DF9E2E01, 1, 13)))">
-				<MoveTo QuestId="1" XYZ="-199.7458,30.92782,-36.19707" />
-				<UseObject ObjectName="Ancient Machine" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="13" UseRange="40" IgnoreLOS="True" WaitTime="2" XYZ="-199.7458,30.92782,-36.19707" />
+				<MoveTo QuestId="0xE0004E36DF9E2E01" XYZ="-199.7458,30.92782,-36.19707" />
+				<UseObject ObjectName="Ancient Machine" QuestId="0xE0004E36DF9E2E01" BranchId="1" StepId="13" Radius="20" UseRange="40" IgnoreLOS="True" WaitTime="4" XYZ="-199.7458,30.92782,-36.19707" />
 			</If>
 			<CompleteQuest QuestName="Imprisoned One's Reward" QuestId="0xE0000963D04DF130" />
 			<!-- Use Quick Travel to Outpost Zaroshe, if possible -->
