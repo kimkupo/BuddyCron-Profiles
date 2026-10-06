@@ -740,61 +740,15 @@
 			<CompleteQuest QuestName="Dead Drop" QuestId="0xE0002464A72266E0" />
 		</If>
 		
-		<!-- The Flame -->
+		<!-- Skip stuck side quest The Flame
 		<If Condition="((HasQuest(0xE0007D79BEDD837E)) and (not IsQuestComplete(0xE0007D79BEDD837E)))">
 			<UseObject ObjectName="Signal Beacon" QuestId="0xE0007D79BEDD837E" BranchId="1" StepId="2" IgnoreLOS="True" WaitTime="3" XYZ="168.3533,-317.719,-275.7646" />
 			<UseObject ObjectName="Signal Beacon" QuestId="0xE0007D79BEDD837E" BranchId="1" StepId="3" IgnoreLOS="True" WaitTime="3" XYZ="166.8955,-318.7,-286.7138" />
 			<UseObject ObjectName="Signal Beacon" QuestId="0xE0007D79BEDD837E" BranchId="1" StepId="4" IgnoreLOS="True" WaitTime="3" XYZ="175.3063,-319.699,-287.6533" />
-			<!-- Skip nonexistent NPC dialogue at The Flame
-			<If Condition="HasQuest(0xE0007D79BEDD837E) and not IsBranchStepComplete(0xE0007D79BEDD837E, 1, 5)">
-				<MoveTo QuestId="0xE0007D79BEDD837E" XYZ="178.8808,-319.699,-280.0938" />
-			</If>
-			<If Condition="HasQuest(0xE0007D79BEDD837E) and not IsBranchStepComplete(0xE0007D79BEDD837E, 1, 6)" >
-				<TalkTo Name="The Flame" QuestId="0xE0007D79BEDD837E" WaitTime="1" XYZ="178.8808,-319.699,-280.0938" />
-			</If>
-			<Grind While="not IsBranchStepComplete(0xE0007D79BEDD837E, 2, 2)">
-				<GrindArea Name="Kill The Flame">
-					<MinLevel>1</MinLevel>
-					<MaxLevel>51</MaxLevel>
-					<Mobs>
-						<Mob>The Flame</Mob>
-					</Mobs>
-					<Hotspots>
-						<Hotspot Name="My Location" XYZ="178.8808,-319.699,-280.0938" />
-					</Hotspots>
-				</GrindArea>
-			</Grind>
-			<If Condition="HasQuest(0xE0007D79BEDD837E) and not IsBranchStepComplete(0xE0007D79BEDD837E, 2, 3)" >
-				<TalkTo QuestId="0xE0007D79BEDD837E" WaitTime="1" Name="Admiral Jefand Ange" XYZ="178.944,-319.699,-280.1225" />
-			</If>
-			-->
-			<!-- Snuff Out the Flame's Forces -->
-			<If Condition="HasQuest(0xE00091750BAB6A32) and (not IsQuestComplete(0xE00091750BAB6A32))">
-				<Grind While="HasQuest(0xE00091750BAB6A32) and (not IsQuestComplete(0xE00091750BAB6A32))">
-					<GrindArea Name="Snuff Out the Flame's Forces">
-						<MinLevel>1</MinLevel>
-						<MaxLevel>51</MaxLevel>
-						<Mobs>
-							<Mob>The Flame's Enforcer</Mob>
-							<Mob>The Flame's Rifleman</Mob>
-							<Mob>The Flame's Slicer</Mob>
-						</Mobs>
-						<Hotspots>
-							<Hotspot Name="My Location" XYZ="167.1867,-317.719,-276.9117" />
-							<Hotspot Name="The Flame's Rifleman" XYZ="166.7195,-318.7,-286.653" />
-							<Hotspot Name="The Flame's Rifleman" XYZ="175.602,-319.699,-288.07" />
-						</Hotspots>
-					</GrindArea>
-				</Grind>
-			</If>
 			<TurnInQuest QuestName="The Flame" QuestId="0xE0007D79BEDD837E" TurnInName="Agent Madel Felth" XYZ="162.0222,-318.5989,-258.5681" />
 			<CompleteQuest QuestName="The Flame" QuestId="0xE0007D79BEDD837E" />
-			
-
-			<ForceVendor VendorType="Train" />
-			<ForceVendor VendorType="Repair" />
-			
 		</If>
+		-->
 		
 		<!-- Warrior - Disrupt Negotiations - Return to Halidrell Setsyn -->
 		<If Condition="((HasQuest(0xE00073956804C0B7)) and (not IsQuestComplete(0xE00073956804C0B7)))">
