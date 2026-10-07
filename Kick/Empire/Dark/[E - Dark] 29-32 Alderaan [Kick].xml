@@ -1645,16 +1645,18 @@
 						<TalkTo QuestId="0xE0002CAB0740C1D8" Name="Watcher Two" XYZ="-10.0147,0.001,4.2177" />
 					</If>
 				</If>
-				<!-- The Method and The Madness (Bonus) -->
+				<!-- The Method and The Madness (Bonus) - Commented out to prioritize purple class quest -->
+				<!--
 				<If Condition="((HasQuest(0xE000FC073BCCC832)) and (not IsQuestComplete(0xE000FC073BCCC832)))">
 					<UseObject ObjectName="Holo Computer" QuestId="0xE000FC073BCCC832" BranchId="1" StepId="2" TaskId="0" IgnoreLOS="True" WaitTime="2" XYZ="-2.507278,0.4009999,-11.76971" />
 					<UseObject ObjectName="Holo Computer" QuestId="0xE000FC073BCCC832" BranchId="1" StepId="2" TaskId="2" IgnoreLOS="True" WaitTime="2" XYZ="-3.026865,5.201,-19.78639" />
 					<UseObject ObjectName="Holo Computer" QuestId="0xE000FC073BCCC832" BranchId="1" StepId="2" TaskId="1" IgnoreLOS="True" WaitTime="2" XYZ="8.867107,4.806,-21.55231" />
 				</If>
+				-->
 				<If Condition="HasQuest(0xE0002CAB0740C1D8) and not IsBranchStepComplete(0xE0002CAB0740C1D8, 12, 3)">
 					<MoveTo QuestId="0xE0002CAB0740C1D8" XYZ="17.5048,5.48102,-16.5634" />
 				</If>
-				<UseObject ObjectName="Eradicator Launch Panel" QuestId="0xE0002CAB0740C1D8" BranchId="8" StepId="2" IgnoreLOS="True" WaitTime="4" XYZ="16.55928,5.48102,-16.63952" />
+				<UseObject ObjectName="Eradicator Launch Panel" QuestId="0xE0002CAB0740C1D8" BranchId="8" StepId="2" UseRange="15" Radius="20" IgnoreLOS="True" WaitTime="4" XYZ="16.55928,5.48102,-16.63952" />
 				<TurnInQuest QuestName="A New Epoch of Fear" QuestId="0xE0002CAB0740C1D8" TurnInName="Darth Jadus" XYZ="18.9885,5.661019,-16.0007" />
 				<CompleteQuest QuestName="A New Epoch of Fear" QuestId="0xE0002CAB0740C1D8" />
 			</If>
