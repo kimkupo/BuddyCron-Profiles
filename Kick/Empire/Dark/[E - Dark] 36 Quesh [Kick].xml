@@ -281,32 +281,7 @@
 					</Hotspots>
 				</GrindArea>
 			</Grind>
-			<!-- Stage 1 - Infusion (Disabled) -->
-			<If Condition="False and (not IsQuestComplete(0xE000D717FCBE6A1E))">
-				<Grind GrindRef="Stage 1 - Infusion - Defeat Republic Forces" While="(not IsQuestComplete(0xE000D717FCBE6A1E))" />
-			</If>
-			<!-- Stage 2 - Infusion -->
-			<If Condition="(not IsQuestComplete(0xE000D617FCBE6C53))">
-				<Grind GrindRef="Stage 1 - Infusion - Defeat Republic Forces" While="(not IsQuestComplete(0xE000D617FCBE6C53))" />
-			</If>
-			<!-- Stage 3 - Infusion -->
-			<If Condition="(not IsQuestComplete(0xE000D517FCBE6F80))">
-				<UseObject QuestId="0xE000D517FCBE6F80" ObjectName="Factory Shipment" BranchId="1" StepId="4" IgnoreLOS="True" Radius="200" WaitTime="2" >
-					<Hotspots>
-						<Hotspot Name="My Location" XYZ="-18.8875,0.2150023,20.77604" />
-						<Hotspot Name="My Location" XYZ="-20.0727,7.805155,16.09096" />
-						<Hotspot Name="Republic Guardsman" XYZ="-11.4483,7.892282,38.0262" />
-						<Hotspot Name="Republic Protector" XYZ="-13.79788,8.867445,30.83232" />
-						<Hotspot Name="My Location" XYZ="-15.27401,7.892282,27.14504" />
-						<Hotspot Name="Republic Guardsman" XYZ="-13.2437,7.834127,17.9207" />
-						<Hotspot Name="My Location" XYZ="-2.332234,8.874939,29.37051" />
-					</Hotspots>
-				</UseObject>
-			</If>
-			<!-- Final Stage - Infusion (Disabled) -->
-			<If Condition="False and (not IsQuestComplete(0xE000853DA97CDC42))">
-				<UseObject ObjectName="Venom Processing Tank" QuestId="0xE000853DA97CDC42" BranchId="1" StepId="4" IgnoreLOS="True" WaitTime="4" XYZ="-30.10324,7.883216,16.45145" />
-			</If>
+			<!-- Infusion Bonus Quest (Disabled to prevent getting trapped at red forcefield barrier) -->
 		</If>
 		
 		<!-- Adrenal Appropriation -->
@@ -361,7 +336,7 @@
 		</If>
 		
 		<!-- Turnin Infusion -->
-		<If Condition="((HasQuest(0xE000EE43A0BE4EDF)) and (not IsQuestComplete(0xE000EE43A0BE4EDF)))">
+		<If Condition="False and ((HasQuest(0xE000EE43A0BE4EDF)) and (not IsQuestComplete(0xE000EE43A0BE4EDF)))">
 			<TurnInQuest QuestName="Infusion" QuestId="0xE000EE43A0BE4EDF" TurnInName="Intelligence Terminal" Type="Placeable" UseRange="2" XYZ="20.8194,8.508716,165.3319" />
 			<CompleteQuest QuestName="Infusion" QuestId="0xE000EE43A0BE4EDF" />
 		</If>
