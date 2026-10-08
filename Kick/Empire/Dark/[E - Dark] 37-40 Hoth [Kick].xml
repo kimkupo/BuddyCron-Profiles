@@ -1251,10 +1251,20 @@
 		
 		<!-- Agent - Hand of Jadus: The Emperor's Secret -->
 		<If Condition="((HasQuest(0xE0004063A8DC413D)) and (not IsQuestComplete(0xE0004063A8DC413D)))">
-			<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="0" IgnoreLOS="True" Radius="5" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="223.3771,-3.370714,43.0371" />
-			<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="0" IgnoreLOS="True" Radius="5" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="222.7571,-2.698387,47.20168" />
-			<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="0" IgnoreLOS="True" Radius="5" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="228.6057,-1.415841,57.40483" />
-			<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="0" IgnoreLOS="True" Radius="5" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="223.4174,-2.323335,64.22456" />
+			<If Condition="(not IsBranchStepComplete(0xE0004063A8DC413D, 1, 2))">
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="0" IgnoreLOS="True" Radius="30" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="223.3771,-3.370714,43.0371" />
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="1" IgnoreLOS="True" Radius="30" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="222.7571,-2.698387,47.20168" />
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="2" IgnoreLOS="True" Radius="30" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="228.6057,-1.415841,57.40483" />
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="3" IgnoreLOS="True" Radius="30" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="223.4174,-2.323335,64.22456" />
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" IgnoreLOS="True" Radius="200" WaitTime="5" ObjectName="Imperial Guardsman">
+					<Hotspots>
+						<Hotspot Name="Imperial Guardsman 1" XYZ="223.3771,-3.370714,43.0371" />
+						<Hotspot Name="Imperial Guardsman 2" XYZ="222.7571,-2.698387,47.20168" />
+						<Hotspot Name="Imperial Guardsman 3" XYZ="228.6057,-1.415841,57.40483" />
+						<Hotspot Name="Imperial Guardsman 4" XYZ="223.4174,-2.323335,64.22456" />
+					</Hotspots>
+				</UseObject>
+			</If>
 		</If>
 		
 		<!-- Spoils to the Victor -->
@@ -1324,6 +1334,20 @@
 		
 		<!-- Agent - Turnin Hand of Jadus: The Emperor's Secret -->
 		<If Condition="((HasQuest(0xE0004063A8DC413D)) and (not IsQuestComplete(0xE0004063A8DC413D)))">
+			<If Condition="(not IsBranchStepComplete(0xE0004063A8DC413D, 1, 2))">
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="0" IgnoreLOS="True" Radius="30" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="223.3771,-3.370714,43.0371" />
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="1" IgnoreLOS="True" Radius="30" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="222.7571,-2.698387,47.20168" />
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="2" IgnoreLOS="True" Radius="30" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="228.6057,-1.415841,57.40483" />
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" TaskId="3" IgnoreLOS="True" Radius="30" WaitTime="5" ObjectName="Imperial Guardsman" XYZ="223.4174,-2.323335,64.22456" />
+				<UseObject QuestId="0xE0004063A8DC413D" BranchId="1" StepId="2" IgnoreLOS="True" Radius="200" WaitTime="5" ObjectName="Imperial Guardsman">
+					<Hotspots>
+						<Hotspot Name="Imperial Guardsman 1" XYZ="223.3771,-3.370714,43.0371" />
+						<Hotspot Name="Imperial Guardsman 2" XYZ="222.7571,-2.698387,47.20168" />
+						<Hotspot Name="Imperial Guardsman 3" XYZ="228.6057,-1.415841,57.40483" />
+						<Hotspot Name="Imperial Guardsman 4" XYZ="223.4174,-2.323335,64.22456" />
+					</Hotspots>
+				</UseObject>
+			</If>
 			<TurnInQuest QuestName="Hand of Jadus: The Emperor's Secret" QuestId="0xE0004063A8DC413D" TurnInName="Lalya Verron" XYZ="128.5437,8.831228,57.018" />
 			<CompleteQuest QuestName="Hand of Jadus: The Emperor's Secret" QuestId="0xE0004063A8DC413D" RewardIndex="1" />
 		</If>
