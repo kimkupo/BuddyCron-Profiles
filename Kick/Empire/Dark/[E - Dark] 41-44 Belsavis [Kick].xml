@@ -1160,19 +1160,29 @@
 			<TurnInQuest QuestName="Key to the Vaults" QuestId="0xE0009962C76D7C85" TurnInName="Colonel Grang" XYZ="-143.2563,22.18833,58.8192" />
 			<CompleteQuest QuestName="Key to the Vaults" QuestId="0xE0009962C76D7C85" RewardIndex="2" />
 			<!-- The Dread Masters 0xE0009CBA95382E40-->
-
+		</If>
+		
+		<!-- Ancient Transport Center to Rakata Transport Center -->
+		<If Condition="(Me.Position.Z &gt; -80)">
 			<UseTransport TransporterName="Rakata Transporter" Type="Taxi" Option="Rakata Transport Center" 
-									XYZ="-145.9847,23.4788,81.32983" 
-									To="-229.1563" />
+									XYZ="-145.9847,23.4788,81.32983" />
 		</If>
 		
 		<!-- Pickup [AREA] The Esh-kha Sanctuary -->
 		<If Condition="((not HasQuest(0xE000111A32353A35)) and (not IsQuestComplete(0xE000111A32353A35)))">
+			<If Condition="(Me.Position.Z &gt; -80)">
+				<UseTransport TransporterName="Rakata Transporter" Type="Taxi" Option="Rakata Transport Center" 
+										XYZ="-145.9847,23.4788,81.32983" />
+			</If>
 			<MoveTo QuestId="1" Name="Max Security Block J-7" XYZ="-253.5982,17.201,-127.0622" />
 		</If>
 		
 		<!-- [AREA] The Esh-kha Sanctuary -->
 		<If Condition="((HasQuest(0xE000111A32353A35)) and (not IsQuestComplete(0xE000111A32353A35)))">
+			<If Condition="(Me.Position.Z &gt; -80)">
+				<UseTransport TransporterName="Rakata Transporter" Type="Taxi" Option="Rakata Transport Center" 
+										XYZ="-145.9847,23.4788,81.32983" />
+			</If>
 			<Grind GrindRef="[AREA] The Esh-kha Sanctuary" While="(not IsBranchStepComplete(0xE000111A32353A35, 1, 3))" />
 			<UseObject QuestId="0xE000111A32353A35" BranchId="1" StepId="5" IgnoreLOS="True" Radius="50" WaitTime="5" >
 				<Placeables>
@@ -1199,6 +1209,10 @@
 		
 		<!-- Pickup [AREA] The Scar -->
 		<If Condition="((not HasQuest(0xE00087D711D2A711)) and (not IsQuestComplete(0xE00087D711D2A711)))">
+			<If Condition="(Me.Position.Z &gt; -80)">
+				<UseTransport TransporterName="Rakata Transporter" Type="Taxi" Option="Rakata Transport Center" 
+										XYZ="-145.9847,23.4788,81.32983" />
+			</If>
 			<MoveTo QuestId="1" Name="The Scar" XYZ="-157.4968,17.69403,-183.4446" />
 		</If>
 		
@@ -1231,6 +1245,10 @@
 		
 		<!-- Turnin The Dread Masters -->
 		<If Condition="((HasQuest(0xE0009CBA95382E40)) and (not IsQuestComplete(0xE0009CBA95382E40)))">
+			<If Condition="(Me.Position.Z &gt; -80)">
+				<UseTransport TransporterName="Rakata Transporter" Type="Taxi" Option="Rakata Transport Center" 
+										XYZ="-145.9847,23.4788,81.32983" />
+			</If>
 			<TurnInQuest QuestName="The Dread Masters" QuestId="0xE0009CBA95382E40" Type="Placeable" UseRange="2" TurnInName="Imperial Agent's Corpse" XYZ="-124.413,17.99678,-185.7503" />
 			<CompleteQuest QuestName="The Dread Masters" QuestId="0xE0009CBA95382E40" />
 		
